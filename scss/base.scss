@@ -1,0 +1,30 @@
+@import "variables.scss";
+
+html {
+  color: $fontColor;
+  background: $backgroundColor;
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: $fontFamilyBase;
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+}
+
+main {
+  width: $contentWidth;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
