@@ -4,8 +4,8 @@ import { IdGenerator } from '../util/idGenerator';
 
 abstract class GameModel {
     public id: number;
-    public type: GameModelType
-    public coordinates: Coordinates
+    public type: GameModelType;
+    public coordinates: Coordinates;
 
     constructor(type: GameModelType, coordinates: Coordinates) {
         const idGenerator = IdGenerator.getInstance();
