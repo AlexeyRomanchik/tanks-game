@@ -1,14 +1,17 @@
-import { GameModel } from '../models/gameModel';
+import { Missile } from '../models/index';
 import { DestroyableComponent } from './destroyableComponent';
 import { Dimensions } from './dimensions';
 
 const missileRadius = 15;
 
 class MissileCompnent extends DestroyableComponent {
-    constructor(gameModel: GameModel) {
-        const dimensions = new Dimensions(missileRadius, missileRadius);
+    public override gameModel: Missile;
 
+    constructor(gameModel: Missile) {
+        const dimensions = new Dimensions(missileRadius, missileRadius);
         super(gameModel, dimensions);
+
+        this.gameModel = gameModel;
         this._componentDOM.classList.add('missile');
     }
 

@@ -6,7 +6,6 @@ class DestroyableComponent extends Component {
 
     constructor(gameModel: GameModel, dimensions: Dimensions) {
         super(gameModel, dimensions);
-
     }
 
     public destroy(): void {

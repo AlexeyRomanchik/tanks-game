@@ -1,11 +1,11 @@
-import { GameModel } from '../models/gameModel';
 import { GameModelType } from '../models/gameModelType';
+import { Wall } from '../models/index';
 import { Component } from './component';
 import { DestroyableComponent } from './destroyableComponent';
 import { Dimensions } from './dimensions';
 
 class WallComponent extends DestroyableComponent {
-    constructor(gameModel: GameModel, dimensions: Dimensions) {
+    constructor(gameModel: Wall, dimensions: Dimensions) {
         super(gameModel, dimensions);
         this._componentDOM.classList.add('wall');
     }
