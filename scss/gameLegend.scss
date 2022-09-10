@@ -1,0 +1,50 @@
+@import "variables.scss";
+
+.game-object {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+
+  &__user-lives {
+    background: url($userLivesImage);
+    background-size: contain;
+  }
+
+  &__player-tank {
+    background: url($userTankImage);
+    background-size: contain;
+  }
+
+  &__enemy-tank {
+    background: url($enemyTankImage);
+    background-size: contain;
+  }
+
+  &__wall {
+    background: url($wallImage);
+    background-size: contain;
+  }
+}
+
+#legend {
+  flex: 1 30%;
+  margin-left: 20px;
+}
+
+.legend-list {
+  padding: 0;
+}
+
+.legend-item {
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 10px;
+  display: block;
+  height: 64px;
+  line-height: 64px;
+}
+
+.legend-item .game-object {
+  top: 0;
+  left: 0;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>
+		<%= htmlWebpackPlugin.options.title %>
+	</title>
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+	<link rel="shortcut icon" href="../public/icons/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<main>
+		<section id="game-field">
+			<div id="game-map"></div>
+		</section>
+
+		<section id="legend">
+			<h2>Легенда</h2>
+			<ul class="legend-list">
+				<li class="legend-item">
+					<div class="game-object game-object__player-tank"></div>
+					танк игрока
+				</li>
+				<li class="legend-item">
+					<div class="game-object game-object__enemy-tank"></div>
+					вражеский танк
+				</li>
+				<li class="legend-item">
+					<div class="game-object game-object__wall"></div>
+					стена
+				</li>
+				<li class="legend-item">
+					<div class="game-object game-object__user-lives"></div>
+					Осталось жизней: <span class="left-to-respawn"></span>
+				</li>
+				<li class="legend-item">
+					<div class="game-object game-object__enemy-tank"></div>
+					Осталось уничтожить: <span class="left-to-destroy"></span>
+				</li>
+			</ul>
+		</section>
+	</main>
+
+	<div class="modal">
+		<div class="modal__wrapper">
+			<div class="modal__content">
+				<form class="modal__form" action="#">
+					<div class="modal__form-title"></div>
+					<div>Set difficulty level</div>
+					<select class="modal__form-level-options">
+					</select>
+					<input class="modal__form-start-game" type="submit"></input>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

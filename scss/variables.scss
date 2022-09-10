@@ -1,0 +1,24 @@
+$backgroundColor: #ededed;
+
+$gameMapBackgroundColor: #000;
+$fontColor: #222;
+
+$hitPointsColor: #00ff11;
+$missileColor: #ff7003;
+
+$modalWindowBackgroundColor: #fff;
+$modalWindowContentBackgroundColor: $backgroundColor;
+$baseButtonColor: #ff1111;
+$baseButtonColorHover: #e40404;
+$selectOptionsColor: #dadada;
+
+$contentWidth: 1100px;
+$gameFieldWidth: 832px;
+$gameMapHeight: 896px;
+
+$fontFamilyBase: monospace;
+
+$userLivesImage: "../../public/img/user-lives.png";
+$userTankImage: "../../public/img/player-tank.png";
+$enemyTankImage: "../../public/img/enemy-tank.png";
+$wallImage: "../../public/img/wall.png";

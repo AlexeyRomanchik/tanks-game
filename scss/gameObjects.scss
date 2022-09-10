@@ -1,0 +1,57 @@
+@import "variables.scss";
+
+.player-tank {
+  position: absolute;
+  background: url($userTankImage);
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hit-points {
+  height: 4px;
+  opacity: 0.8;
+  background: $hitPointsColor;
+  z-index: 10;
+}
+
+.enemy-tank {
+  position: absolute;
+  background: url($enemyTankImage);
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.wall {
+  position: absolute;
+  background-size: cover;
+  background: url($wallImage);
+}
+
+.missile {
+  position: absolute;
+  background: $missileColor;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+#game-field {
+  flex: 1;
+
+  min-width: $gameFieldWidth;
+  width: $gameFieldWidth;
+}
+#game-map {
+  position: relative;
+
+  margin: 10px;
+  width: $gameFieldWidth;
+  height: $gameMapHeight;
+  background: $gameMapBackgroundColor;
+}
