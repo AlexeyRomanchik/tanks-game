@@ -7,7 +7,7 @@ import { Coordinates } from '../../../models/coordinates';
 import { Direction, GameModelType, Tank, TankStats } from '../../../models/index';
 import { GameSettings } from '../../gameSettings/gameSettings';
 
-function createEnemyTanks(gameSettings: GameSettings, destroyObserver: IObserver) {
+function createEnemyTanks(gameSettings: GameSettings, destroyObserver: IObserver): EnemyTankComponent[] {
     const enemyTanksComponents = [];
 
     for (let i = 0; i < MAP.length; i++) {
