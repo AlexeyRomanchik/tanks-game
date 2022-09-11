@@ -15,33 +15,37 @@ const TANK_SPEED = 5;
 const MISSILE_SPEED = 16;
 
 class GameSettings {
-	public enemyTanks: number;
-	public enemyTankHitPoints: number;
-	public enemyTankDamage: number;
-	public enemyTankRecharge: number;
-	public tankSpeed: number;
-	public missileSpeed: number;
-	public startEnemyTanks: number;
-	public userTankHitPoints: number;
-	public userTankDagame: number;
-	public userTankRecharge: number;
-	public userLives: number;
+    public enemyTanks: number;
+    public enemyTankHitPoints: number;
+    public enemyTankDamage: number;
+    public enemyTankRecharge: number;
+    public tankSpeed: number;
+    public missileSpeed: number;
+    public startEnemyTanks: number;
+    public userTankHitPoints: number;
+    public userTankDagame: number;
+    public userTankRecharge: number;
+    public userLives: number;
 
-	constructor(gameDifficultyLevels: GameDifficultyLevels) {
-		this.enemyTanks = ENEMY_TANKS * gameDifficultyLevels;
-		this.enemyTankHitPoints = ENEMY_TANK_HIT_POINTS * gameDifficultyLevels;
-		this.enemyTankDamage = ENEMY_TANK_DAMAGE * gameDifficultyLevels;
-		this.enemyTankRecharge = ENEMY_TANK_RECHARGE / gameDifficultyLevels;
+    constructor(gameDifficultyLevels: GameDifficultyLevels) {
+        this.enemyTanks = ENEMY_TANKS * gameDifficultyLevels;
+        this.enemyTankHitPoints = ENEMY_TANK_HIT_POINTS * gameDifficultyLevels;
+        this.enemyTankDamage = ENEMY_TANK_DAMAGE * gameDifficultyLevels;
+        this.enemyTankRecharge = ENEMY_TANK_RECHARGE / gameDifficultyLevels;
 
-		this.userTankHitPoints = USER_TANK_HIT_POINTS / gameDifficultyLevels;
-		this.userTankDagame = USER_TANK_DAMAGE / gameDifficultyLevels;
-		this.userTankRecharge = USER_TANK_RECHARGE;
-		this.userLives = USER_LIVES;
+        this.userTankHitPoints = USER_TANK_HIT_POINTS / gameDifficultyLevels;
+        this.userTankDagame = USER_TANK_DAMAGE / gameDifficultyLevels;
+        this.userTankRecharge = USER_TANK_RECHARGE;
+        this.userLives = USER_LIVES;
 
-		this.tankSpeed = TANK_SPEED;
-		this.missileSpeed = MISSILE_SPEED;
-		this.startEnemyTanks = START_ENEMY_TANKS;
-	}
+        this.tankSpeed = TANK_SPEED;
+        this.missileSpeed = MISSILE_SPEED;
+        this.startEnemyTanks = START_ENEMY_TANKS;
+    }
 }
 
-export { GameSettings }
+function getGameSettings(gameDifficultyLevels: GameDifficultyLevels): GameSettings {
+    return new GameSettings(gameDifficultyLevels);
+}
+
+export { GameSettings, getGameSettings }
