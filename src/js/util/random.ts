@@ -1,6 +1,11 @@
 import { ENEMY_TANKS_BASE } from "../components/map/map";
 import { Direction } from '../models/index';
 
+type EnemyTankBase = {
+    x: number;
+    y: number;
+}
+
 function setRandomDirection(): Direction {
     const rendom = Math.random() * 3;
     const direction = 3 * Math.round(rendom);
@@ -8,9 +13,13 @@ function setRandomDirection(): Direction {
     return direction;
 }
 
-function getRandomEnemyTankBase() {
+function getRandomEnemyTankBase(): EnemyTankBase {
     const index = Math.round(Math.random() * 2);
-    return ENEMY_TANKS_BASE[index];
+    const enemyTankBase = ENEMY_TANKS_BASE[index];
+
+    if (!enemyTankBase) throw new Error('Enemy tank base not found')
+
+    return enemyTankBase;
 }
 
 export { setRandomDirection, getRandomEnemyTankBase }
