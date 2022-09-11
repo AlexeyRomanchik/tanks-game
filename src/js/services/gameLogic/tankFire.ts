@@ -5,7 +5,7 @@ import { WeaponState } from '../../models/index';
 
 import { startMoveMissle } from './movement/moveMissile';
 
-function tankFire(tankComponent: TankComponent, collisionComponents: Component[]) {
+function tankFire(tankComponent: TankComponent, collisionComponents: Component[]): void {
     if (tankComponent.gameModel.currentWeaponState === WeaponState.READY) {
         const missileComponent = tankComponent.fire();
 
