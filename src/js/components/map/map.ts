@@ -1,6 +1,4 @@
-type map = readonly number[][];
-
-const MAP: map = [
+const MAP = [
     [2, 0, 0, 3, 0, 0, 2, 0, 0, 3, 0, 0, 2],
     [0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0, 0],
     [0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0, 0],
@@ -38,11 +36,9 @@ if (!MAP[0]) {
 const GAME_MAP_COLUMNS_COUNT = MAP[0].length;
 const GAME_MAP_ROWS_COUNT = MAP.length;
 
-const gameMap = document.querySelector<HTMLElement>("#game-map");
+const gameMap: HTMLElement = document.querySelector<HTMLElement>("#game-map")
+    ?? new HTMLElement();
 
-if (!gameMap) {
-    throw new Error('Failed to get markup element');
-}
 
 const gameMapWidth = gameMap.clientWidth;
 const gameMapHeight = gameMap.clientHeight;
