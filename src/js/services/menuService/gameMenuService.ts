@@ -21,9 +21,12 @@ function initializeModal(): void {
 
         for (let key in GameDifficultyLevels) {
             const selected = GameDifficultyLevels[key] === level ? 'selected' : '';
+            const value = GameDifficultyLevels[key];
 
-            modalFormLevelOptions.innerHTML +=
-                `<option ${selected} value="${GameDifficultyLevels[key]}">${key}</option>`;
+            if (!isNaN(Number(value))) {
+                modalFormLevelOptions.innerHTML +=
+                    `<option ${selected} value="${value}">${key}</option>`;
+            }
         }
     }
 
