@@ -2,8 +2,7 @@ import { GameModelType, Tank, WeaponState } from '../../models/index';
 import { Component } from '../component';
 import { Dimensions } from '../dimensions';
 import { MissileCompnent } from '../missileComponent';
-import { ObservableComponent } from '../ObservableComponent';
-
+import { ObservableComponent } from '../observableComponent';
 
 class TankComponent extends ObservableComponent {
     protected _hitPoints: HTMLElement;
